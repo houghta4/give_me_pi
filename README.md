@@ -18,7 +18,7 @@ I am using it to get a RPi 4 Model B at market price
 - pip install beautifulsoup4
 
 ## .env example
-TWILIO_ACCOUNT_SID = xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
-TWILIO_AUTH_TOKEN = xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
-TWILIO_NUMBER = +xxxxxxxxxxx
+TWILIO_ACCOUNT_SID = xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx <br/>
+TWILIO_AUTH_TOKEN = xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx <br/>
+TWILIO_NUMBER = +xxxxxxxxxxx <br/>
 PERSONAL_NUMBER = +xxxxxxxxxxx
