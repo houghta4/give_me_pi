@@ -146,13 +146,17 @@ urls = ['https://www.pishop.us/product/raspberry-pi-4-model-b-8gb/',
         ]
 
 try:
+    t = time.time()
     logging.info('-' * 22 + 'Starting process' + '-' * 22)
     logging.info(f'Checking availability of items at given urls every {INTERVAL} seconds.')
-
+    
     # Main loop
     while True:
+        delta_t = time.time()
+        if delta_t - t > 300:
+            t = delta_t
+            logging.info(f'Monitoring product availability')
 
-        logging.info(f'Checking availability list')
         for url in urls:
 
             # Parse page
