@@ -13,8 +13,8 @@ import time
 # Extract domain name so twilio is happy
 import tldextract as tld  
 
-DEBUG = False
-if DEBUG:
+DEBUG = True
+if not DEBUG:
     logging.basicConfig(encoding='utf-8', level=logging.DEBUG, format='[%(asctime)s] \t %(levelname)s \t %(message)s', datefmt='%a %m %d %H:%M:%S %Y')
 else:
     logging.basicConfig(filename='give_me_pi.log', encoding='utf-8', level=logging.INFO, format='[%(asctime)s] \t %(levelname)s \t %(message)s', datefmt='%a %m %d %H:%M:%S %Y')
@@ -169,5 +169,7 @@ try:
                 logging.error(result)
             
         time.sleep(INTERVAL)
-except:
+except Exception as e:
+    logging.exception(e)
+finally:
     logging.info('-' * 23 + 'Ending process' + '-' * 23)
